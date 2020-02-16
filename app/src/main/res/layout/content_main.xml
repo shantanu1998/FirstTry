@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/quantum_bluegrey900"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/quantum_bluegrey900"
+        android:text="Login"
+        android:textColor="@color/quantum_white_100" />
+
+    <Button
+        android:id="@+id/Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/quantum_bluegrey900"
+        android:text="Register"
+        android:textColor="@color/quantum_white_100" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00F8F80A">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="637dp"
+                android:layout_marginTop="-10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="400dp"
+                        android:layout_height="350dp"
+                        android:layout_marginTop="100dp"
+                        android:adjustViewBounds="true"
+                        android:background="#FFFFFFFF"
+                        android:contentDescription="@string/nav_header_subtitle"
+                        android:onClick="Lonavala"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/lonavala"
+                        android:visibility="visible"/>
+
+                    <ImageView
+                        android:layout_width="400dp"
+                        android:layout_height="350dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_marginBottom="0dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/nav_header_desc"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/second"/>
+
+                    <ImageView
+                        android:layout_width="400dp"
+                        android:layout_height="350dp"
+                        android:layout_marginTop="100dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/nav_header_desc"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/third"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_marginTop="600dp"
+                android:layout_marginBottom="0dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/nav_header_desc"
+                android:scaleType="fitCenter"
+                android:src="@drawable/second"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <fragment
+        android:id="@+id/places_autocomplete_fragment"
+        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+
+        android:layout_marginTop="0dp" />
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="00dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:alwaysDrawnWithCache="false"
+        android:visibility="invisible"
+        app:defaultNavHost="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:navGraph="@navigation/mobile_navigation"
+        tools:visibility="invisible" />
+</RelativeLayout>
+
+
+
+
+
+
+
